@@ -38,7 +38,7 @@
   padding: 1px 13px;
   text-transform: lowercase;
   font-family: var(--main-font);
-  font-size: var(--text-font-size);
+  font-size: var(--text-font-size, 18px);
   color: var(--accent-color);
   background-color: transparent;
 }
@@ -74,7 +74,7 @@
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
-  font-size: var(--text-font-size);
+  font-size: var(--text-font-size, 18px);
   line-height: 23px;
 
   color: var(--bg-color);
@@ -93,7 +93,7 @@
 .content__section {
   display: grid;
   gap: 20px;
-  font-size: var(--text-font-size);
+  font-size: var(--text-font-size, 18px);
   line-height: 23px;
 }
 
@@ -103,7 +103,7 @@
 
 .section__title {
   font-family: var(--main-font);
-  font-size: var(--text-font-size);
+  font-size: var(--text-font-size, 18px);
   color: var(--accent-color);
 }
 
@@ -127,5 +127,5 @@
 
 .section__item_title {
   font-weight: 400;
-  font-size: var(--text-font-size);
+  font-size: var(--text-font-size, 18px);
 }
