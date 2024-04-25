@@ -2,12 +2,16 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  padding-inline: 10px;
   font-family: var(--main-font);
+
 }
 
 .header {
   display: grid;
-
+  gap: 55px;
+  padding-block-start: 75px;
 }
 
 .decorated-zone {
@@ -20,15 +24,23 @@
 }
 
 .header__theme-menu-list {
-
+  display: grid;
+  gap: 10px;
 }
 
 .header__theme-menu-item {
-
+  
 }
 
 .header__theme-menu-button {
-
+  outline: 1px solid #FF0070;
+  border: none;
+  padding: 1px 13px;
+  text-transform: lowercase;
+  font-family: var(--main-font);
+  font-size: var(--text-font-size);
+  color: var(--accent-color);
+  background-color: transparent;
 }
 
 .header__theme-menu-button_type_light {
@@ -48,38 +60,72 @@
 }
 
 .header__title {
+  padding-block-start: 15px;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  color: #DB00FF;
 }
 
 .header__sub-title {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--text-font-size);
+  line-height: 23px;
 
+  color: var(--bg-color);
 }
 
 .title-decor {
+  background-color: var(--accent-color);
 
 }
 
 .content {
-
+  display: grid;
+  gap: 50px;
 }
 
 .content__section {
+  display: grid;
+  gap: 20px;
+  font-size: var(--text-font-size);
+  line-height: 23px;
+}
+
+.content__section_title-block {
 
 }
 
 .section__title {
+  font-family: var(--main-font);
+  font-size: var(--text-font-size);
+  color: var(--accent-color);
+}
 
+.section__paragraph-block {
+  display: grid;
+  gap: 10px;
 }
 
 .content__title {
-
+  color: var(--bg-color);
 }
 
 .content__paragraph {
+  color: var(--text-color);
+}
 
+.section__list {
+  display: grid;
+  gap: 20px;
 }
 
 .section__item_title {
-
+  font-weight: 400;
+  font-size: var(--text-font-size);
 }
