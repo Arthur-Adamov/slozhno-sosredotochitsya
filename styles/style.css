@@ -2,8 +2,84 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font);
+}
+
+.header {
+  display: grid;
+
+}
+
+.decorated-zone {
+
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: flex-end;
+}
+
+.header__theme-menu-list {
+
+}
+
+.header__theme-menu-item {
+
+}
+
+.header__theme-menu-button {
+
+}
+
+.header__theme-menu-button_type_light {
+
+}
+
+.header__theme-menu-button_type_dark {
+
+}
+
+.header__theme-menu-button_active {
+
+}
+
+.header__theme-menu-button_type_auto {
+
 }
 
 .header__title {
-  
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__sub-title {
+
+}
+
+.title-decor {
+
+}
+
+.content {
+
+}
+
+.content__section {
+
+}
+
+.section__title {
+
+}
+
+.content__title {
+
+}
+
+.content__paragraph {
+
+}
+
+.section__item_title {
+
 }
