@@ -9,5 +9,6 @@
   --text-font-size: 18px;
   --accent-color: #FF0070;
   --main-font: 'IBM Plex mono', Arial, sans-serif;
+  --frame-padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 

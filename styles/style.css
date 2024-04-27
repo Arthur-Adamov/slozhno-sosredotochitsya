@@ -2,16 +2,22 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--bg-color);
-  padding-inline: 10px;
-  font-family: var(--main-font);
-
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color, #000028);
+  font-family: var(--main-font, sans-serif);
+  gap: 40px;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
   display: grid;
-  gap: 55px;
-  padding-block-start: 75px;
+  grid-template-rows: 1fr 192px 1fr;
+  min-block-size: 668px;
+  padding: var(--frame-padding);
 }
 
 .decorated-zone {
@@ -21,6 +27,7 @@
 .header__theme-menu {
   display: grid;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .header__theme-menu-list {
@@ -30,12 +37,18 @@
 
 .header__theme-menu-item {
   
+
 }
 
 .header__theme-menu-button {
+
+  width: 70px;
+  height: 26px;
   outline: 1px solid #FF0070;
+
+
   border: none;
-  padding: 1px 13px;
+  /* padding: 1px 13px; */
   text-transform: lowercase;
   font-family: var(--main-font);
   font-size: var(--text-font-size, 18px);
@@ -59,10 +72,8 @@
 
 }
 
-.header__title {
-  padding-block-start: 15px;
+.big-title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--accent-color);
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -70,13 +81,33 @@
   color: #DB00FF;
 }
 
+.header__title {
+  align-self: center;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (width > 768px) {
+  .big-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header__theme-menu {
+    justify-content: center;
+    align-items: start;
+  }
+  .header__theme-menu-list {
+    display: flex;
+  }
+}
+
 .header__sub-title {
+  max-width: clamp(355px, 17.2761rem + 20.9553vw, 50%);
+  justify-self: flex-end;
+  align-self: center;
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
   font-size: var(--text-font-size, 18px);
   line-height: 23px;
-
   color: var(--bg-color);
 }
 
@@ -88,6 +119,7 @@
 .content {
   display: grid;
   gap: 50px;
+  padding-inline: var(--frame-padding);
 }
 
 .content__section {
@@ -128,4 +160,33 @@
 .section__item_title {
   font-weight: 400;
   font-size: var(--text-font-size, 18px);
+}
+
+.content__picture-block {
+  display: grid;
+  gap: 10px;
+}
+
+.content__picture {
+
+}
+
+.content__picture img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  min-block-size: 668px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--frame-padding);
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
