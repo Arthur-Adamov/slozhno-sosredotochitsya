@@ -8,7 +8,7 @@
   flex-direction: column;
   background-color: var(--bg-color, #000028);
   font-family: var(--main-font, sans-serif);
-  gap: 40px;
+  gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-size: cover;
@@ -23,12 +23,19 @@
   z-index: -1;
 }
 
-
-
 .paragraph__link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
+
+.paragraph__link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.paragraph__link:focus {
+  border: 1px solid var(--text-color);
+}
+
 
 .header {
   display: grid;
@@ -102,14 +109,9 @@
 }
 
 .header__theme-menu-button {
-
   width: 70px;
   height: 26px;
-  outline: 1px solid #FF0070;
-
-
   border: none;
-  /* padding: 1px 13px; */
   text-transform: lowercase;
   font-family: var(--main-font);
   font-size: var(--text-font-size, 18px);
@@ -117,6 +119,13 @@
   background-color: transparent;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
+}
 .header__theme-menu-button_type_light {
 
 }
@@ -126,7 +135,7 @@
 }
 
 .header__theme-menu-button_active {
-
+  outline: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_type_auto {
@@ -147,7 +156,6 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   position: relative;
   inset-inline-end: clamp(0rem, -1.1927rem + 5.0891vw, 1.25rem);
-
 }
 
 .header__sub-title {
@@ -168,7 +176,7 @@
 
 .content {
   display: grid;
-  gap: 50px;
+  gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
   padding-inline: var(--frame-padding);
 }
 
@@ -176,7 +184,7 @@
   display: grid;
   gap: 20px;
   font-size: var(--text-font-size, 18px);
-  /* line-height: 23px; */
+  line-height: 23.4px;
 }
 
 .content__section_title-block {
@@ -214,16 +222,21 @@
   color: var(--bg-color);
 }
 
-.content__picture-block {
+.content__section:has(.content__picture-block) {
+  gap: 10px;
+}
+
+.gallery {
   display: grid;
   gap: var(--frame-padding);
 }
 
-.content__picture {
-
+.gallery__picture-block {
+  display: grid;
+  gap: var(--frame-padding);
 }
 
-.content__picture img {
+.gallery__picture {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -233,8 +246,6 @@
 .footer {
   min-block-size: clamp(41.75rem, 20.5191rem + 90.5852vw, 64rem);
   display: grid;
-  /* justify-content: center;
-  align-items: center; */
   padding: var(--frame-padding);
 }
 
