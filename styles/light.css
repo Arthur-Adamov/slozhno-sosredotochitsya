@@ -9,4 +9,24 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --accent-color: #FF8DCB;
+
+  --big-title-color: #FF8DCB;
+  background-image: url(../images/cover-image-light.png);
 }
+
+/* .page::before {
+  content: '';
+  display: none;
+}
+
+.big-title {
+  color: #FFC2E6;
+}
+
+.title-decor,
+.section__title {
+  color: var(--text-color);
+} */
