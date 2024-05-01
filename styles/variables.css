@@ -26,5 +26,6 @@
   --rec-color: #FF0070;
 
   --shading-color: rgb(0 0 0 / 0.2);
+  --bg-image: url(../images/cover-image-dark.png);
 }
 
