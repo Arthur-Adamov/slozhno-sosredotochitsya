@@ -10,23 +10,47 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #FFF1F7;
-  --text-color: #353430;
-  --accent-color: #FF8DCB;
+  /* --text-color: #353430; */
 
-  --big-title-color: #FF8DCB;
+  --big-title-color: #FFC2E6;
+  --section-tittle-color: #353430;
+  --title-decor-color: #FF8DCB;
+  --content-paragraph-color: #353430;
+  --content-title-color: #353430;
+
+  --accent-color: #353430;
+  --shadow-color: #FF8DCB;
+
+  --button-hover-color: rgba(50, 49, 45, 0.4);
+
+  --rec-color: transparent;
+  --shading-color: transparent;
+
   background-image: url(../images/cover-image-light.png);
 }
 
-/* .page::before {
-  content: '';
-  display: none;
-}
+@media (prefers-color-scheme: light) {
+  .page.theme_light {
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+    --bg-color: #FFF1F7;
+    /* --text-color: #353430; */
+  
+    --big-title-color: #FFC2E6;
+    --section-tittle-color: #353430;
+    --title-decor-color: #FF8DCB;
+    --content-paragraph-color: #353430;
+    --content-title-color: #353430;
+  
+    --accent-color: #353430;
+    --shadow-color: #FF8DCB;
+  
+    background-image: url(../images/cover-image-light.png);
+  }
+  
+} 
 
-.big-title {
-  color: #FFC2E6;
-}
 
-.title-decor,
-.section__title {
-  color: var(--text-color);
-} */
+
