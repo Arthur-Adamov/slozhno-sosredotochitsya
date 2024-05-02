@@ -294,6 +294,10 @@ button:disabled {
   .footer {
     min-block-size: 1024px;
   }
+  .first-section, 
+  .third-section {
+    grid-template-columns: 35vh 1fr 1fr;
+  }
 }
 
 @media (min-width: 1024px) {
