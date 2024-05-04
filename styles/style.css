@@ -28,12 +28,11 @@
   border: 1px solid currentColor;
 }
 
-
 .header {
   display: grid;
+  position: relative;
   grid-template-rows: 1fr min-content 1fr;
-  /* min-block-size: clamp(41.75rem, 20.5191rem + 90.5852vw, 64rem); */
-  block-size: clamp(668px, 20.5191rem + 90.5852vw, 100vh);
+  min-block-size: 668px;
   padding: var(--frame-padding);
 }
 
@@ -45,8 +44,8 @@
   border-width: 0px 0px 1px 1px;
   border-style: solid;
   border-color: var(--accent-color);
-  /* align-self: end; */
   bottom: var(--frame-padding);
+  left: var(--frame-padding);
 }
 
 .decorated-zone::after {
@@ -57,13 +56,12 @@
   border-width: 1px 1px 0px 0px;
   border-style: solid;
   border-color: var(--accent-color);
-  /* justify-self: end; */
+  top: var(--frame-padding);
   right: var(--frame-padding);
 }
 
 .rec {
   position: absolute;
-  /* justify-self: flex-end; */
   right: var(--frame-padding);
   color: var(--rec-color);
   font-family: var(--main-font);
@@ -71,6 +69,7 @@
   font-size: var(--text-font-size);
   line-height: 25px;
   text-transform: uppercase;
+  top: var(--frame-padding);
 }
 
 .rec::after {
@@ -96,7 +95,6 @@
   gap: 10px;
 }
 
-
 .header__theme-menu-button {
   min-width: 70px;
   min-height: 26px;
@@ -118,7 +116,6 @@
   outline: none;
 }
 
-
 .header__theme-menu-button_active {
   outline: 1px solid currentColor;
 }
@@ -126,7 +123,6 @@
 button:disabled {
   pointer-events: none;
 }
-
 
 .big-title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -231,9 +227,10 @@ button:disabled {
 }
 
 .footer {
-  block-size: clamp(668px, 20.5191rem + 90.5852vw, 100vh);
   display: grid;
+  min-block-size: 668px;
   padding: var(--frame-padding);
+  position: relative;
 }
 
 .footer__title {
@@ -246,16 +243,22 @@ button:disabled {
   .big-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
   .header__theme-menu {
     justify-content: center;
     align-items: start;
   }
+
   .header__theme-menu-list {
     display: flex;
   }
 }
 
 @media (min-width: 768px) {
+  .header,
+  .footer {
+    block-size: 100vh;
+  }
 
   .why-section,
   .how-section {
@@ -289,22 +292,8 @@ button:disabled {
   }
 }
 
-@media (min-width: 768px) and (width < 1024px) {
-  .header,
-  .footer {
-    min-block-size: 1024px;
-  }
-}
-
 @media (min-width: 1024px) {
   .content__section_block {
-    
     grid-template-columns: repeat(3, 1fr);
-    
-  }
-
-  .header,
-  .footer {
-    min-block-size: 768px;
   }
 }
