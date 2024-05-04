@@ -32,6 +32,7 @@
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
   min-block-size: 668px;
   padding: var(--frame-padding);
 }
@@ -228,6 +229,7 @@ button:disabled {
 
 .footer {
   display: grid;
+  block-size: 100vh;
   min-block-size: 668px;
   padding: var(--frame-padding);
   position: relative;
@@ -255,10 +257,10 @@ button:disabled {
 }
 
 @media (min-width: 768px) {
-  .header,
+  /* .header,
   .footer {
     block-size: 100vh;
-  }
+  } */
 
   .why-section,
   .how-section {
